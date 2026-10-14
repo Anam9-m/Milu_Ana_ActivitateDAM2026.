@@ -1,6 +1,9 @@
 package com.example.activitatenoua;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ActivitateRezultat extends AppCompatActivity {
+
+
+    private int nr1;
+    private int nr2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +27,30 @@ public class ActivitateRezultat extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        Intent it = getIntent();
+        Bundle bundle = it.getExtras();
+
+        String mesaj = bundle.getString("mesaj", "");
+        this.nr1 = bundle.getInt("nr1", 0);
+        this.nr2 = bundle.getInt("nr2", 0);
+
+
+        Toast.makeText(this, mesaj, Toast.LENGTH_SHORT).show();
+
+
     }
 
+public void intoarceInActivitate(View view)
+{
+    String altMesaj="mesajNou";
+    int suma=this.nr1+this.nr2;
+    Intent it=new Intent();
+    it.putExtra("altMesaj",altMesaj);
+    it.putExtra("suma",suma);
 
+    setResult(RESULT_OK,it);
+    finish();
+}
 }
