@@ -26,3 +26,4 @@ rootProject.name = "Milu_Ana_ActivitateDAM2026"
 include(":app")
 include(":app:activitatenoua")
 include(":app:activitaterezultat")
+include(":seminar4")

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Milu_Ana_ActivitateDAM2026</string>
+    <string-array name="orase">
+        <item>București</item>
+        <item>Cluj-Napoca</item>
+        <item>Iași</item>
+        <item>Timișoara</item>
+    </string-array>
 </resources>

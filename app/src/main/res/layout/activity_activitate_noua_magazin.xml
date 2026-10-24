@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+
+  <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adăugare magazin"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+   <EditText
+            android:id="@+id/etDenumire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Denumire" />
+
+    <EditText
+            android:id="@+id/etSuprafata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Suprafață (mp)"
+            android:inputType="number" />
+
+       <CheckBox
+            android:id="@+id/cbGol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gol" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipul magazinului:" />
+
+        <RadioGroup
+            android:id="@+id/rgTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbAlimentar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Alimentar"
+
+                />
+
+            <RadioButton
+                android:id="@+id/rbHaine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Haine" />
+
+            <RadioButton
+                android:id="@+id/rbElectronice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electronice" />
+        </RadioGroup>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oraș:" />
+
+        <Spinner
+            android:id="@+id/spOras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/orase"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating:"
+               />
+
+        <RatingBar
+            android:id="@+id/rbRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+
+            />
+
+        <Switch
+            android:id="@+id/swParcare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Are parcare"
+
+            />
+
+        <Button
+            android:id="@+id/btnSalvare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvează"
+            />
+
+
+    </LinearLayout>
+           </ScrollView>
