@@ -18,6 +18,12 @@
         android:layout_height="wrap_content"
         android:text="Adauga magazin (design AI)" />
 
+    <Button
+        android:id="@+id/btnLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vezi lista" />
+
     <TextView
         android:id="@+id/tvMagazin"
         android:layout_width="match_parent"

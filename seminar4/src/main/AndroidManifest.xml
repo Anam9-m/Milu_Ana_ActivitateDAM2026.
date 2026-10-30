@@ -34,6 +34,10 @@
             android:name=".AdaugaMagazinAIActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ListaMagazineActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

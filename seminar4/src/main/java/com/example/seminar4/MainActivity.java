@@ -14,7 +14,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    public static ArrayList<Magazin> magazine = new ArrayList<>();
 
     TextView tvMagazin;
     ActivityResultLauncher<Intent> launcher;
@@ -33,13 +37,15 @@ public class MainActivity extends AppCompatActivity {
         tvMagazin = findViewById(R.id.tvMagazin);
         Button btnAdauga = findViewById(R.id.btnAdauga);
         Button btnAdaugaAI = findViewById(R.id.btnAdaugaAI);
+        Button btnLista = findViewById(R.id.btnLista);
 
         launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
             if (result.getResultCode() == RESULT_OK && result.getData() != null) {
                 Bundle bundle = result.getData().getExtras();
                 Magazin magazin = (Magazin) bundle.getSerializable("magazin");
+                magazine.add(magazin);
                 tvMagazin.setText(magazin.toString());
-                Toast.makeText(this, "Magazin adaugat!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Magazin adaugat in lista!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -51,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
         btnAdaugaAI.setOnClickListener(v -> {
             Intent intent = new Intent(this, AdaugaMagazinAIActivity.class);
             launcher.launch(intent);
+        });
+
+        btnLista.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ListaMagazineActivity.class);
+            startActivity(intent);
         });
     }
 }
