@@ -1,10 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AdaugaMagazin">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adauga magazin" />
+
+        <EditText
+            android:id="@+id/etDenumire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Denumire" />
+
+        <EditText
+            android:id="@+id/etNrAngajati"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numar angajati"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etSuprafata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Suprafata"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:id="@+id/spnOras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbAlimentar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alimentar"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbElectronice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electronice" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cbParcare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are parcare" />
+
+        <Switch
+            android:id="@+id/swNonStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non-stop" />
+
+        <RatingBar
+            android:id="@+id/rbRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSalvare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salveaza" />
+    </LinearLayout>
+</ScrollView>
